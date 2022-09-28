@@ -1,0 +1,11 @@
+:root{
+    --bg: #0c111d;
+    --text: #e1edfa;
+    --input: #112352;
+    --v1: #4663ac;
+    --v2: #526eb4;
+    --v3: #2e4b94;
+}
+*:focus-visible{
+    outline: 2px solid #b5caff99;
+}

@@ -1,0 +1,296 @@
+*{outline:0;margin:0;box-sizing: border-box;font-family: 'Roboto', sans-serif}
+
+@font-face{font-family:'Roboto';font-style:normal;font-weight:100;src:url('../fonts/roboto-v29-latin-100.eot');src:local(''),url('../fonts/roboto-v29-latin-100.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-100.woff2') format('woff2'),url('../fonts/roboto-v29-latin-100.woff') format('woff'),url('../fonts/roboto-v29-latin-100.ttf') format('truetype'),url('../fonts/roboto-v29-latin-100.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url('../fonts/roboto-v29-latin-300.eot');src:local(''),url('../fonts/roboto-v29-latin-300.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-300.woff2') format('woff2'),url('../fonts/roboto-v29-latin-300.woff') format('woff'),url('../fonts/roboto-v29-latin-300.ttf') format('truetype'),url('../fonts/roboto-v29-latin-300.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url('../fonts/roboto-v29-latin-regular.eot');src:local(''),url('../fonts/roboto-v29-latin-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'),url('../fonts/roboto-v29-latin-regular.woff') format('woff'),url('../fonts/roboto-v29-latin-regular.ttf') format('truetype'),url('../fonts/roboto-v29-latin-regular.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url('../fonts/roboto-v29-latin-500.eot');src:local(''),url('../fonts/roboto-v29-latin-500.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-500.woff2') format('woff2'),url('../fonts/roboto-v29-latin-500.woff') format('woff'),url('../fonts/roboto-v29-latin-500.ttf') format('truetype'),url('../fonts/roboto-v29-latin-500.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url('../fonts/roboto-v29-latin-700.eot');src:local(''),url('../fonts/roboto-v29-latin-700.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-700.woff2') format('woff2'),url('../fonts/roboto-v29-latin-700.woff') format('woff'),url('../fonts/roboto-v29-latin-700.ttf') format('truetype'),url('../fonts/roboto-v29-latin-700.svg#Roboto') format('svg')}@font-face{font-family:'Roboto';font-style:normal;font-weight:900;src:url('../fonts/roboto-v29-latin-900.eot');src:local(''),url('../fonts/roboto-v29-latin-900.eot?#iefix') format('embedded-opentype'),url('../fonts/roboto-v29-latin-900.woff2') format('woff2'),url('../fonts/roboto-v29-latin-900.woff') format('woff'),url('../fonts/roboto-v29-latin-900.ttf') format('truetype'),url('../fonts/roboto-v29-latin-900.svg#Roboto') format('svg')}
+
+html,body,app{display:block;height: 100%;overflow: hidden;}
+
+button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+input{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Material-Icons-Outlined.woff2) format('woff2');
+}
+
+.m-i{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;display:inline-block;line-height:1;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;font-feature-settings:'liga'}
+
+::-webkit-scrollbar {
+    width: 15px
+}
+
+::-webkit-scrollbar-track {
+    background-color: initial
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #444
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4b4b4b
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #5a5a5a
+}
+
+::-webkit-scrollbar-corner { background: #1a1a1a; }
+
+::selection{
+    background-color: #4b23ff
+    /*background-color: #4b23ffcc; < less vibrant*/
+}
+
+x, .x {
+    z-index: 2;
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 40%;
+    top: 15px;
+    padding: 10px;
+    right: 15px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+x:hover, .x:hover {
+    background: #55555533;
+    border-radius: 50%;
+}
+
+x:focus-visible, .x:focus-visible {
+    outline: 1px solid #bbb;
+    border-radius: 50%;
+}
+
+x:active, .x:active {
+    background: #55555555;
+    border-radius: 45%;
+}
+
+tick {
+    box-sizing: initial;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 6px;
+    margin-left: 60%; 
+    border-bottom: 4px solid #913fb1;
+    border-right: 4px solid #913fb1;
+}
+
+modal{
+    opacity: 0;
+    position: fixed;
+    z-index: 29;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #00000044;
+    transition: 0.3s, visibility 0s;
+}
+
+/*App style starts here*/
+
+:root{
+    --bg: #e1edfa;
+    --text: #4663ac;
+    --input: #fff;
+    --v1: #c8d9ed;
+    --v2: #c1d8f0;
+    --v3: #e1f1fd;
+}
+
+app{
+    background: var(--bg);
+    color: var(--text);
+}
+*:focus-visible{
+    outline: 2px solid #4663ac99;
+}
+
+header{
+    padding: 16px;
+    user-select: none;
+}
+
+header h1{
+    display: inline-block;
+    /* font-size: 29px; */
+}
+header .btn{
+    float: right;
+}
+.btn{
+    user-select: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    background: var(--v2);
+    margin-left: 10px;
+    padding: 9px;
+    max-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .3s, outline 0s;
+}
+.btn:hover, .btn:focus-visible, .btn:active, header .pactive{
+    border-radius: 8px;
+    max-width: 200px;
+}
+.btn:active, header .pactive{
+    color: var(--v2);
+    background: var(--text);
+    transition: .1s;
+}
+.btn i{
+    font-size: 28px!important;
+    margin: -3px;
+    margin-right: 6px;
+    float: left;
+}
+
+.miniwindow{
+    opacity: 0;
+    transform: translateY(-15px);
+
+    user-select: none;
+    position: absolute;
+    right: 16px;
+    padding: 4px;
+    border-radius: 12px;
+    color: var(--v3);
+    background: var(--text);
+    transition: .2s;
+}
+.miniwindow p{
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 4px;
+}
+.miniwindow p i{
+    margin: -3px;
+    margin-right: 6px;
+    float: left;
+}
+.miniwindow p:hover, .miniwindow p:focus-visible{
+    color: var(--text);
+    background: var(--v3);
+}
+.miniwindowactive{
+    padding: 12px;
+    opacity: 1;
+    transform: initial;
+}
+
+.search{
+    width: 100%;
+}
+.search input{
+    color: var(--input);
+    background: var(--text);
+    border-radius: 99px;
+    font-size: 20px;
+    padding: 12px;
+    width: 60%;
+    margin: 40px 20%;
+}
+.search input::placeholder{
+    color: var(--v2);
+}
+.search button{
+    background-color: var(--v3);
+    padding: 6px;
+    position: absolute;
+    right: calc(20% + 6px);
+    top: 116px;
+
+    border-radius: 99px;
+}
+@media screen and (max-width: 680px) {
+    .search input{
+        width: 90%;
+        margin: 40px 5%;
+    }
+    .search button{
+        right: calc(5% + 6px);
+    }
+}
+
+.search button:focus-visible{
+    outline: 2px solid var(--v1);
+}
+
+.search p{
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -10px);
+    transition: .3s;
+}
+.search .pactive{
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.logs{
+    overflow: auto;
+    width: 90%;
+    height: calc(100% - 200px);
+    margin-left: 5%;
+}
+.logs div{
+    position: relative;
+    background: var(--v2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    max-height: 223px;
+    overflow: hidden;
+    transition: .3s;
+}
+.logs div:hover, .logs div:focus-within{
+    max-height: 323px;
+    overflow: auto;
+    box-shadow: inset 1px 2px 2px var(--text);
+}
+.logs a{
+    display: block;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.logs p *{
+    display: block;
+}
+.logs .btn{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.logs .btn:nth-child(2){
+    top: 45px;
+}
